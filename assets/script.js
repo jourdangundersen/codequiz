@@ -1,40 +1,40 @@
 var allquestions = [
     {
-        Question:"Which of the following is a plus sign?",
-        Option1: "-",
-        Option2: "+",
-        Option3: "*",
-        Option4: "!",
+        Question:"Which HTML tag creates a paragraph?",
+        Option1: "<div>",
+        Option2: "<p>",
+        Option3: "<h1>",
+        Option4: "<main>",
         Answer: "2"
     },
     {
-        Question:"2 Which of the following is a plus sign?",
-        Option1: "-",
-        Option2: "+",
-        Option3: "*",
-        Option4: "!",
-        Answer: "2"
+        Question:"Which heading tag will have the biggest font?",
+        Option1: "<h1>",
+        Option2: "<h2>",
+        Option3: "<h3>",
+        Option4: "<h4>",
+        Answer: "1"
     }, {
-        Question:"3Which of the following is a plus sign?",
-        Option1: "-",
-        Option2: "+",
-        Option3: "*",
-        Option4: "!",
-        Answer: "2"
+        Question:"Is bootstrap helpful?",
+        Option1: "No",
+        Option2: "Kinda",
+        Option3: "Maybe",
+        Option4: "Oh yeah",
+        Answer: "4"
     }, {
-        Question:"4Which of the following is a plus sign?",
-        Option1: "-",
-        Option2: "+",
-        Option3: "*",
-        Option4: "!",
-        Answer: "2"
+        Question:"Can coding be frustrating?",
+        Option1: "Not one single bit",
+        Option2: "Not even a little",
+        Option3: "Yes",
+        Option4: "No it's not",
+        Answer: "3"
     }, {
-        Question:"5Which of the following is a plus sign?",
-        Option1: "-",
-        Option2: "+",
-        Option3: "*",
-        Option4: "!",
-        Answer: "2"
+        Question:"How many HTML tags are there total?",
+        Option1: "2",
+        Option2: "1",
+        Option3: "A lot",
+        Option4: "10",
+        Answer: "3"
     },
 ];
 var startbutton =document.getElementById("start");
