@@ -45,7 +45,7 @@ var option1 = document.getElementById("option1");
 var option2 = document.getElementById("option2");
 var option3 = document.getElementById("option3");
 var option4 = document.getElementById("option4");
-var rightanswer = document.getElementById("rightanswer");
+var answer = document.getElementById("answer");
 var userinitials = document.getElementById("userinitials");
 var saveuser = document.getElementById("saveuser");
 var userscore = document.getElementById("userscore");
@@ -80,9 +80,11 @@ function checkuseranswer(){
     var userchoice = this.getAttribute("data-value")
     if (userchoice == allquestions[currentquestion].Answer){
         rightanswer ++ 
+        answer.textContent="Correct !!!"
     }
     else {
         wronganswer ++
+        answer.innerText="incorrect"
     }
     console.log(userchoice)
     if (currentquestion < allquestions.length-1) {
