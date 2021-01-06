@@ -49,6 +49,7 @@ var answer = document.getElementById("answer");
 var userinitials = document.getElementById("userinitials");
 var saveuser = document.getElementById("saveuser");
 var userscore = document.getElementById("userscore");
+var displayinitials = document.getElementById("displayinitials");
 var currentquestion = 0
 var rightanswer = 0
 var wronganswer = 0
@@ -62,7 +63,18 @@ firstcontainer.style.display="block"
 displayquestion()
 })
 saveuser.addEventListener("click", function() {
-    
+    var user = userinitials.value
+    var history = JSON.parse(localStorage.getItem("initials")) || []
+    history.push({
+        user:user, 
+        score:rightanswer
+    })
+    var htmldata = ""
+    for (let i=0; i < history.length; i++){
+        htmldata += `<h5>User : ${history[i].user}  Score:${history[i].score}</h5>`
+    }
+    displayinitials.innerHTML=htmldata
+    localStorage.setItem("initials",JSON.stringify(history))
 })
 option1.addEventListener("click", checkuseranswer)
 option2.addEventListener("click", checkuseranswer)
@@ -100,4 +112,10 @@ function displayuserscore(){
     firstcontainer.style.display="none"
     secondcontainer.style.display="block"
     userscore.innerText="rightanswer:" + rightanswer + "wronganswer" + wronganswer
+    var history = JSON.parse(localStorage.getItem("initials")) || []
+    var htmldata = ""
+    for (let i=0; i < history.length; i++){
+        htmldata += `<h5>User : ${history[i].user}  Score:${history[i].score}</h5>`
+    }
+    displayinitials.innerHTML=htmldata
 }
