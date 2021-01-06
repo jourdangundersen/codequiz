@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+    <header class="bg-danger">Code Quiz</header>
+    <main class="container">
+        <h1>Instructions</h1>
+        <button class="btn btn-primary" id="start">Start</button>
+    </main>
+    <main id="firstcontainer" class="container">
+        <h1 id="question">Question 1</h1>
+        <button class="btn btn-info" id="option1" data-value="1">Option 1</button>
+        <button class="btn btn-info" id="option2" data-value="2">Option 2</button>
+        <button class="btn btn-info" id="option3" data-value="3">Option 3</button>
+        <button class="btn btn-info" id="option4" data-value="4">Option 4</button>
+        <p id="rightanswer"></p>
+    </main>
+    <main id="secondcontainer" class="container">
+        <input id="userinitials" type="text">
+        <button id="saveuser" class="btn btn-danger">Save User Initials</button>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
+</body>
+
+</html>
