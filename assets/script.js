@@ -48,6 +48,7 @@ var option4 = document.getElementById("option4");
 var rightanswer = document.getElementById("rightanswer");
 var userinitials = document.getElementById("userinitials");
 var saveuser = document.getElementById("saveuser");
+var userscore = document.getElementById("userscore");
 var currentquestion = 0
 var rightanswer = 0
 var wronganswer = 0
@@ -90,5 +91,11 @@ function checkuseranswer(){
     }
     else {
         console.log(rightanswer, wronganswer)
+        displayuserscore()
     }
+}
+function displayuserscore(){
+    firstcontainer.style.display="none"
+    secondcontainer.style.display="block"
+    userscore.innerText="rightanswer:" + rightanswer + "wronganswer" + wronganswer
 }
