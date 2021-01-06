@@ -49,6 +49,9 @@ var rightanswer = document.getElementById("rightanswer");
 var userinitials = document.getElementById("userinitials");
 var saveuser = document.getElementById("saveuser");
 var currentquestion = 0
+var rightanswer = 0
+var wronganswer = 0
+
 firstcontainer.style.display="none"
 secondcontainer.style.display="none"
 
@@ -71,4 +74,21 @@ option2.innerText = allquestions[currentquestion].Option2
 option3.innerText = allquestions[currentquestion].Option3
 option4.innerText = allquestions[currentquestion].Option4
 
+}
+function checkuseranswer(){
+    var userchoice = this.getAttribute("data-value")
+    if (userchoice == allquestions[currentquestion].Answer){
+        rightanswer ++ 
+    }
+    else {
+        wronganswer ++
+    }
+    console.log(userchoice)
+    if (currentquestion < allquestions.length-1) {
+        currentquestion ++ 
+        displayquestion()
+    }
+    else {
+        console.log(rightanswer, wronganswer)
+    }
 }
