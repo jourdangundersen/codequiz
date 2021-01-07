@@ -92,11 +92,11 @@ function checkuseranswer(){
     var userchoice = this.getAttribute("data-value");
     if (userchoice == allquestions[currentquestion].Answer){
         rightanswer ++ ;
-        answer.textContent="Correct !!!";
+        answer.textContent="Correct answer! Woohoo!";
     }
     else {
         wronganswer ++;
-        answer.innerText="incorrect";
+        answer.innerText="Sorry, that's incorrect.";
     }
     console.log(userchoice);
     if (currentquestion < allquestions.length-1) {
@@ -111,11 +111,11 @@ function checkuseranswer(){
 function displayuserscore(){
     firstcontainer.style.display="none";
     secondcontainer.style.display="block";
-    userscore.innerText="rightanswer:" + rightanswer + "wronganswer" + wronganswer;
+    userscore.innerText="Correct Answers: " + rightanswer + " | Incorrect Answers:" + wronganswer;
     var history = JSON.parse(localStorage.getItem("initials")) || [];
     var htmldata = "";
     for (let i=0; i < history.length; i++){
-        htmldata += `<h5>User : ${history[i].user}  Score:${history[i].score}</h5>`;
+        htmldata += `<h5>User: ${history[i].user}  | Score: ${history[i].score}</h5>`;
     }
     displayinitials.innerHTML=htmldata;
 }
