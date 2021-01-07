@@ -8,11 +8,14 @@
 
 </head>
 <body>
+    <!--header used to title the page and give instructions to the user-->
     <header class="bg-danger"><h1 style="text-align: center;">Code Quiz</h1> <div class="timer">Time: <span id="time"></span></div></header>
     <main class="container">
         <h4 style="text-align: center;">Please answer the question below.</h4>
+        <!--start button to begin quiz-->
         <button class="btn btn-primary" id="start">Start</button>
     </main>
+    <!--question and option buttons-->
     <main style="text-align: center;" id="firstcontainer" class="container">
         <h4 id="question">Question 1</h4>
         <button class="btn btn-info" id="option1" data-value="1">Option 1</button>
@@ -21,6 +24,7 @@
         <button class="btn btn-info" id="option4" data-value="4">Option 4</button>
         <p id="answer"></p>
     </main>
+    <!--displays and records the score of the current user and displays previous users-->
     <main id="secondcontainer" class="container">
         <h1 id="userscore"></h1>
         <input id="userinitials" type="text">
