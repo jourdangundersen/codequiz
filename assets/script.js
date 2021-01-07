@@ -53,6 +53,9 @@ var displayinitials = document.getElementById("displayinitials");
 var currentquestion = 0;
 var rightanswer = 0;
 var wronganswer = 0;
+var time = allquestions.length * 15;
+var timerid;
+var timeElement = document.getElementById("time");
 
 firstcontainer.style.display="none";
 secondcontainer.style.display="none";
@@ -60,6 +63,7 @@ secondcontainer.style.display="none";
 startbutton.addEventListener("click", function() {
 startbutton.style.display="none";
 firstcontainer.style.display="block";
+timerid = setInterval(clocktic, 1000);
 displayquestion();
 });
 saveuser.addEventListener("click", function() {
@@ -88,6 +92,14 @@ option3.innerText = allquestions[currentquestion].Option3;
 option4.innerText = allquestions[currentquestion].Option4;
 
 }
+function clocktic (){
+    time --;
+    timeElement.textContent = time;
+    if (time <= 0){
+        clearInterval(timerid);
+        time = 0
+    }
+}
 function checkuseranswer(){
     var userchoice = this.getAttribute("data-value");
     if (userchoice == allquestions[currentquestion].Answer){
@@ -96,6 +108,7 @@ function checkuseranswer(){
     }
     else {
         wronganswer ++;
+        time -= 15;
         answer.innerText="Sorry, that's incorrect.";
     }
     console.log(userchoice);
