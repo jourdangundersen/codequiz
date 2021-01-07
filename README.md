@@ -19,4 +19,8 @@
 * created buttons for all of the options
 * created a container to display all of the past quiz-taker's initials
 
-![](assets/Screen%20Shot%202021-01-06%20at%2010.59.19%20PM.png
+![](assets/Screen%20Shot%202021-01-06%20at%2010.59.19%20PM.png)
+
+![](assets/Screen%20Shot%202021-01-06%20at%2010.59.26%20PM.png)
+
+![](assets/Screen%20Shot%202021-01-06%20at%2010.59.39%20PM.png)
