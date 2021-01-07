@@ -97,7 +97,7 @@ function clocktic (){
     timeElement.textContent = time;
     if (time <= 0){
         clearInterval(timerid);
-        time = 0
+        timeElement.textContent = 0;
     }
 }
 function checkuseranswer(){
