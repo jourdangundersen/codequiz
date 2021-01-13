@@ -104,7 +104,8 @@ function clocktic (){
     timeElement.textContent = time;
     if (time <= 0){
         clearInterval(timerid);
-        timeElement.textContent = 0;
+        timeElement.textContent = "Time's Up";
+        displayuserscore();
     }
 }
 // checks the user's input to see if it is incorrect or correct
@@ -127,6 +128,7 @@ function checkuseranswer(){
     }
     else {
         console.log(rightanswer, wronganswer);
+        clearInterval(timerid);
         displayuserscore();
     }
 }
